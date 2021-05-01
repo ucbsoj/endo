@@ -17,6 +17,7 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/
     // Access to jQuery and DOM versions of element
     base.$el = $(el);
     base.el = el;
+    
 
     // Add a reverse reference to the DOM object
     base.$el.data("chooseYourOwnAdventure", base);
@@ -41,6 +42,20 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/
 
       let questionBody = $("<div />")
         .addClass("card-body");
+      
+      let explanation = $("<div />")
+        .addClass("alert alert-info explanation mt-3")
+        .text(d.explanation);
+      
+      if(d.audio !== ""){
+        $("<audio />")
+          .addClass("mt-4")
+          .attr("src", d.audio)
+          .attr("type","audio/mp3")
+          .attr("width", "100%")
+          .appendTo(explanation);
+        
+      }
 
       if(d.image !== ""){
         $("<img />").attr("src", d.image).appendTo(questionHolder);
@@ -67,16 +82,34 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/
         });
         questionChoices.appendTo(questionBody);
       }
-
+      
+      if(d.explanation !== "" && d.audio !== ""){
+        explanation.appendTo(questionBody);
+      }
+      
       questionBody.appendTo(questionHolder);
       questionHolder.appendTo(base.$el);
       if(!first){
         questionHolder.hide();
       }
+      
+      base.$el.find('audio').mediaelementplayer({
+          pluginPath: '/js/mediaelement/'
+      });
         
     }
     
     base.activateQuestions = function(){
+      
+      //show explanation
+      $(this).closest(".card").find(".explanation").removeClass("visually-hidden");
+      
+      //get audio if there is one
+      let audio = $(this).closest(".card").find('audio');
+      
+      if(audio.length){
+        audio.get(0).pause();
+      }
       
       //disable buttons just clicked
       let scrollTo = $('.active')
@@ -85,7 +118,7 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/
         .addClass('disabled')
         .offset().top;
       
-      $("html,body").animate({'scrollTop': scrollTo + ($(window).height()*0.1)}, {duration:200, queue:false, delay:0, easing:'easeOutCubic'});
+      //$("html,body").animate({'scrollTop': scrollTo + ($(window).height()*0.1)}, {duration:200, queue:false, delay:0, easing:'easeOutCubic'});
       
       //save number of where we're going
       let goto = $(this).data('adventure-goto');

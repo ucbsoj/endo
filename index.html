@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="js/mediaelement/mediaelementplayer.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
 
     <!-- begin twitter summary card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -54,27 +56,42 @@
     
     <div class="hero" role="banner">
       <header class="justify-content-center text-center font-weight-bold d-flex flex-column align-items-center vh-100">
-        <h1 class="display-4 font-weight-bold">Endometriosis Project</h1>
-        <p class="lead">Basic info about your project</p>
         
-<!--    
-         <video src="assets/sample-images/video.mp4" muted loop playsinline autoplay width="100%" height="100%"></video>
--->
+        <div class="shade">
+          <h1 class="display-5 font-weight-bold">Endometriosis:</h1>
+          <h3>The <span class="red">Silenced</span> Struggle of 175 Million Women</h3>
+        </div>
+        
+        <video muted loop playsinline autoplay width="100%" height="100%">
+          <source src="assets/videos/hero-video/playlist.m3u8" type="application/x-mpegURL">
+          <source src="assets/videos/hero-video/hero-video.mp4" type="video/mp4">
+        </video>
         
       </header>
     </div>
     
+    <section role="main" class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-12 col-sm-8 col-md-6">
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+
+          <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.</p>
+        </div>
+      </div>
+    </section>
+    
     
     <!-- The mobile video explainer -->
     <section id="fullscreen-video">
-      <video muted playsinline preload autoplay>
-        <source src="https://int.nyt.com/data/videotape/finished/2015/08/1440496681/PopSong_3_4-768.mp4" type="video/mp4">
+      <video id="explainer" playsinline preload controls width="100%" height="100%">
+        <source src="assets/videos/opening-video/playlist.m3u8" type="application/x-mpegURL">
+        <source src="assets/videos/opening-video/opening-video.mp4" type="video/mp4">
       </video>
     </section>
     
     
     <!-- Text that explains the quiz thing -->
-    <section role="main" class="pt-5">
+    <section role="main" class="pt-5 container">
       <div class="row justify-content-center mt-5">
         <div class="col-12 col-sm-8 col-md-6">
           <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
@@ -86,7 +103,7 @@
     
     
     <!-- Quiz holder -->
-    <section role="main">
+    <section role="main container">
       <div class="row justify-content-center mt-5">
         <div class="col-12 col-sm-8 col-md-6">
           <div id="quiz-holder"></div>
@@ -97,12 +114,14 @@
     
     
     <!-- final few paragraphs wrapping up -->
-    <section role="main">
+    <section role="main" class="container">
       <div class="row justify-content-center mt-5">
         <div class="col-12 col-sm-8 col-md-6">
           <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
 
           <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.</p>
+          
+          <img style="max-width: 250px;" class="img-fluid float-start me-3" src="assets/website_graphics/black_outline/crying_black.png" alt="crying">
           
           <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
 
@@ -110,6 +129,38 @@
         </div>
       </div>
     </section>
+    
+    
+    <!-- Graphics -->
+    <div class="container-fluid">
+      
+      <div class="d-flex flex-row">
+        <div class="col-12 col-sm-8">
+          <img class="img-fluid" src="assets/website_graphics/black_outline/birth%20control_black.png" alt="birth control">
+        </div>
+      </div>
+      
+      
+      <div class="d-flex flex-row-reverse">
+        <div class="col-12 col-sm-8 text-end">
+          <img class="img-fluid" src="assets/website_graphics/black_outline/calendar_black.png" alt="birth control">
+        </div>
+      </div>
+      
+      <div class="d-flex flex-row">
+        <div class="col-12 col-sm-8">
+          <img class="img-fluid" src="assets/website_graphics/black_outline/heart_black.png" alt="birth control">
+        </div>
+      </div>
+      
+      <div class="d-flex flex-row-reverse">
+        <div class="col-12 col-sm-8 text-end">
+          <img class="img-fluid" src="assets/website_graphics/black_outline/blood_black.png" alt="birth control">
+        </div>
+      </div>
+      
+      
+    </div>
     
     
     
@@ -128,51 +179,217 @@
     
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="js/jquery.rwdImageMaps.min.js"></script>
     <script src="js/jquery-quiz.js"></script>
+    <script src="js/hls.min.js"></script>
+    <script src="js/mediaelement/mediaelement-and-player.min.js"></script>
     <script>
       jQuery(document).ready(function($){
         
+        //hls video support
+        function loadHLS(){
+          $(".hero video source[src*='m3u8']").each(function(){
+            const video = $(this).parent('video').get(0);
+            const src = $(this).attr('src');
+            if (!video.canPlayType('application/vnd.apple.mpegurl')) {
+              if(Hls.isSupported()){
+                const hls = new Hls();
+                hls.loadSource(src);
+                hls.attachMedia(video);
+              }
+            }
+          });
+        }
+        
+        loadHLS();
+        
+
+        
+        $('#fullscreen-video video').mediaelementplayer({
+            videoWidth: '100%',
+            videoHeight: '100%',
+            stretching: 'fill',
+            enableAutosize: true,
+            renderers: ['native_hls', 'html5'],
+            pluginPath: 'js/mediaelement/',
+            shimScriptAccess: 'always',
+            success: function(mediaElement, originalNode, instance) {
+			 // do things
+		    }
+            // more configuration
+        });
+        
         
         const adventure = [
-            {
-                "id"      : 1,
-                "title"   : "You're 13 years old and you just got your first period. You're experiencing really painful cramps and you're not sure what to do.",
-                "prompt"  : "What do you wish to do next?",
-                "image"   :   "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Charnel_House_at_St_Helens_Church%2C_Cliffe%2C_Kent%2C_England%2C_2015-05-06-5136.jpg/640px-Charnel_House_at_St_Helens_Church%2C_Cliffe%2C_Kent%2C_England%2C_2015-05-06-5136.jpg",
-                "choices"  : [
-                  {"option":"You tell your mom. She gives you painkillers and says painful periods are normal.", ifChosenGoTo: 2 },
-                  {"option":"You look up your symptoms online. All results say painful periods are normal and there's nothing to worry about.", ifChosenGoTo: 3 }
-                ]
-            },
-            {
-                "id"      : 2,
-                "title"   : "You're a junior in high school and it's prom night. You get your period a few hours before prom and it's extremely painful. You're struggling to get up and get dressed.",
-                "prompt"  : "What do you wisth to do next?",
-                "image"   : "",
-                "choices"  : [
-                  {"option":"You decide to skip prom and rest at home", ifChosenGoTo: 1 },
-                  {"option":"You don't want to miss prom. You take a lot of painkillers and force yourself to go.", ifChosenGoTo: 1 }
-                ]
-            },
-            {
-                "id"      : 3,
-                "title"   : "Regardless of how painful it may be, period pain is normalized. Young girls are often told it's normal.",
-                "prompt"  : "",
-                "image"   : "",
-                "choices"  : [
-                  {"option":"Go back", ifChosenGoTo: 1 }
-                ]
-            },
-            {
-                "id"      : 4,
-                "title"   : "Regardless of how painful it may be, period pain is normalized. Young girls are often told it's normal.",
-                "prompt"  : "",
-                "image"   : "",
-                "choices"  : [
-                  {"option":"Go back", ifChosenGoTo: 1 }
-                ]
-            },
+          {
+            "id": 1,
+            "title": "You're 13 years old and you just got your first period. You're experiencing really painful cramps and you don't know how to stop it.",
+            "prompt": "What do you do?",
+            "explanation": "",
+            "image": "",
+            "audio": "",
+            "choices": [
+                {"option": "You find your mom and ask for help", "ifChosenGoTo":2},
+                {"option": "You look up your symptoms online", "ifChosenGoTo":3}
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Your mom says painful periods are normal. She gives you painkillers and makes you some tea.",
+            "prompt": "",
+            "explanation": "Period pain is normalized. Young girls are often told it's normal to experience excruciating pain.",
+            "image": "",
+            "audio": "",
+            "choices": [
+                {"option": "Next", "ifChosenGoTo":4}
+            ]
+          },
+          {
+            "id": 3,
+            "title": "All results say painful periods are normal and there's nothing to worry about.",
+            "prompt": "",
+            "explanation": "Period pain is normalized. Young girls are often told it's normal to experience excruciating pain.",
+            "image": "",
+            "audio": "",
+            "choices": [
+                {"option": "Next", "ifChosenGoTo":4}
+            ]
+          },
+          {
+            "id": 4,
+            "title": "You're a junior in high school and it's prom night. You get your period a few hours before prom and the sharp pain in your stomach is back. You're struggling to get out of bed to get dressed.",
+            "prompt": "What do you do?",
+            "explanation": "",
+            "image": "",
+            "audio": "",
+            "choices": [
+                {"option": "You decide to skip prom and stay home to rest", "ifChosenGoTo":5},
+                {"option": "You don't want to miss prom. You take painkillers and push through.", "ifChosenGoTo":6}
+            ]
+          },
+          {
+            "id": 5,
+            "title": "",
+            "prompt": "",
+            "explanation": "It's common for people with endo to miss out on major life events, like prom, parties and even weddings, due to the immense pain they feel. In many cases it keeps them bed-ridden for days, and not just during their menstrual cycle.",
+            "image": "",
+            "audio": "assets/audio/Aileen_cancel_plans.mp3",
+            "choices": [
+                {"option": "Next", "ifChosenGoTo":9}
+            ]
+          },
+          {
+            "id": 6,
+            "title": "The pain continues throughout the night and you continue taking painkillers. You take more than the recommended amount and end up overdosing. You're rushed to the hospital.",
+            "prompt": "",
+            "explanation": "",
+            "image": "",
+            "audio": "",
+            "choices": [
+                {"option": "Next", "ifChosenGoTo":7}
+            ]
+          },
+          {
+            "id": 7,
+            "title": "You wake up in the hospital and the doctor says you're stable now. He asks you why you took all those painkillers. You tell him you didn't want to miss prom and didn't know how to deal with the pain.",
+            "prompt": "",
+            "explanation": "",
+            "image": "",
+            "audio": "",
+            "choices": [
+                {"option": "The doctor says there's nothing wrong with you. You can continue taking painkillers without exceeding the recommended limit.", "ifChosenGoTo":8},
+                {"option": "The doctor asks you more questions about your period and symptoms. He prescribes birth control to help regulate it.", "ifChosenGoTo":9}
+            ]
+          },
+          {
+            "id": 8,
+            "title": "",
+            "prompt": "",
+            "explanation": "It's common for endo patients to be met with similar responses from doctors. It takes the average woman between seven and 10 years to find a doctor who believes her pain and is willing to look into the possibility of endo as the root of the problem.",
+            "image": "",
+            "audio": "",
+            "choices": [
+                {"option": "Start over", "ifChosenGoTo":1}
+            ]
+          },
+          {
+            "id": 9,
+            "title": "It's been seven years. You're 20 years old now. You've tried different types of birth control but none of them help ease any of your symptoms. They also come with their own side effects, like depression and weight gain. You've already seen five different gynocologists but none have pinpointed the cause of the pain. You start researching endo after hearing about it from your coworker. You join Facebook support groups and connect with other women who have endo. You finally find people who understand you and believe your pain. A handful of them recommend a gynecologist in another state.",
+            "prompt": "What do you want to do?",
+            "explanation": "",
+            "image": "",
+            "audio": "",
+            "choices": [
+                {"option": "You can't afford to travel at the moment. You continue seeing your gynecologist.", "ifChosenGoTo":10},
+                {"option": "You get in touch with the doctor. The first available appoinntment is in two months. You book it and buy a plane ticket.", "ifChosenGoTo":11}
+            ]
+          },
+          {
+            "id": 10,
+            "title": "It's been a couple of months. You've saved up and can afford to travel and meet the doctor your endo support group friends recommended. You book the first available appointment in a month and buy a plane ticket.",
+            "prompt": "",
+            "explanation": "",
+            "image": "",
+            "audio": "",
+            "choices": [
+                {"option": "Start over", "ifChosenGoTo":1}
+            ]
+          },
+          {
+            "id": 11,
+            "title": "It's the day of your appointment. You go to the doctor and explain to her the pain you've been feeling and all the symptoms you've been experiencing over the past seven years. You tell her you believe you have endo and she agrees. She says you need to get a laparoscopy",
+            "prompt": "",
+            "explanation": "A laproscopy is a surgical diagnostic procedure used to examine the organs inside the abdomen. To this day, it's the only way to diagnose and remove endo tissue.",
+            "image": "",
+            "audio": "",
+            "choices": [
+                {"option": "Next", "ifChosenGoTo":12}
+            ]
+          },
+          {
+            "id": 12,
+            "title": "You get the surgery done and the doctor finds endo tissue on your ovaries, fallopian tubes and tissue lining the pelvis. She removes it. The pain, however, continues months after the surgery. The doctor says its normal because your body is still traumatized from the past seven years. She mentions that some women get a hysterectomy, which is the surgical removal of the uterus, as a solution.",
+            "prompt": "",
+            "explanation": "",
+            "image": "",
+            "audio": "",
+            "choices": [
+                {"option": "You don't want to have kids and believe hysterectomy is the best solution for you.", "ifChosenGoTo":13},
+                {"option": "You're not sure about the hysterectomy yet. You continue following up with your doctor and going to physical therapy in hopes the pain will decrease and eventually go away", "ifChosenGoTo":14}
+            ]
+          },
+          {
+            "id": 13,
+            "title": "Your doctor refuses to perform a hysterectomt because you're too young to make that decision yourself.",
+            "prompt": "",
+            "explanation": "While any woman of legal age can techniclly consent to the procedure, doctors are unlikely to perform the surgery on women under the age of 35.",
+            "image": "",
+            "audio": "",
+            "choices": [
+                {"option": "Next", "ifChosenGoTo":15}
+            ]
+          },
+          {
+            "id": 14,
+            "title": "It's been five months. Your symptoms aren't as strong as they used to be but they're still there. Your periods are still very painful. Sometimes you still cannot get out of bed because of the pain. You don't throw up as much, but it still happens. Sex is still painful. You feel extreme fatigue at least two weeks every month.",
+            "prompt": "",
+            "explanation": "This common for most endo patients. The laproscopy isn't a definite cure to the disease. In many cases, the endo tissue grows back again, which means patients have to undergo the surgery multiple times in their lives.",
+            "image": "",
+            "audio": "",
+            "choices": [
+                {"option": "Next", "ifChosenGoTo":15}
+            ]
+          },
+          {
+            "id": 15,
+            "title": "To this day, the causes of endo are unkown. There is no definite cure.",
+            "prompt": "",
+            "explanation": "",
+            "image": "",
+            "audio": "",
+            "choices": [
+                {"option": "Start over", "ifChosenGoTo":1}
+            ]
+          }
         ];
         
         
