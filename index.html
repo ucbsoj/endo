@@ -86,8 +86,8 @@
     <!-- The mobile video explainer -->
     <section id="fullscreen-video">
       <video id="explainer" playsinline preload controls width="100%" height="100%">
-        <source src="assets/videos/opening-video/playlist.m3u8" type="application/x-mpegURL">
-        <source src="assets/videos/opening-video/opening-video.mp4" type="video/mp4">
+<!--        <source src="assets/videos/opening-video/playlist.m3u8" type="application/x-mpegURL">-->
+        <source src="assets/videos/opening-video/opening-video-2.mp4" type="video/mp4">
       </video>
     </section>
     
@@ -132,30 +132,25 @@
     <!-- Graphics -->
     <div class="container-fluid">
       
-      <div class="d-flex flex-row">
-        <div class="col-12 col-sm-8">
+      <div class="d-flex flex-row align-items-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 offset-lg-3">
           <img class="img-fluid" src="assets/website_graphics/bc_black.png" alt="birth control">
         </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <h3>question here</h3>
+        </div>        
       </div>
       
       
-      <div class="d-flex flex-row-reverse">
-        <div class="col-12 col-sm-8 text-end">
-          <img class="img-fluid" src="assets/website_graphics/iud_black.png" alt="birth control">
+      <div class="d-flex flex-row align-items-center justify-content-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img class="img-fluid" src="assets/website_graphics/bc_black.png" alt="birth control">
         </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <h3>question here</h3>
+        </div>        
       </div>
       
-      <div class="d-flex flex-row">
-        <div class="col-12 col-sm-8">
-          <img class="img-fluid" src="assets/website_graphics/iud_white.png" alt="birth control">
-        </div>
-      </div>
-      
-      <div class="d-flex flex-row-reverse">
-        <div class="col-12 col-sm-8 text-end">
-          <img class="img-fluid" src="assets/website_graphics/black_outline/blood_black.png" alt="birth control">
-        </div>
-      </div>
       
       
     </div>
@@ -177,7 +172,7 @@
     
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-quiz.js"></script>
+    <script src="js/jquery-quiz.js?v=2"></script>
     <script src="js/hls.min.js"></script>
     <script src="js/mediaelement/mediaelement-and-player.min.js"></script>
     <script>
@@ -203,9 +198,9 @@
 
         
         $('#fullscreen-video video').mediaelementplayer({
-            videoWidth: '100%',
-            videoHeight: '100%',
-            stretching: 'fill',
+//            videoWidth: '100%',
+//            videoHeight: '100%',
+            stretching: 'none',
             enableAutosize: true,
             renderers: ['native_hls', 'html5'],
             pluginPath: 'js/mediaelement/',
@@ -223,7 +218,7 @@
             "title": "You're 13 years old and you just got your first period. You're experiencing really painful cramps and you don't know how to stop it.",
             "prompt": "What do you do?",
             "explanation": "",
-            "image": "",
+            "image": "assets/graphics/tampon_white.png",
             "audio": "",
             "choices": [
                 {"option": "You find your mom and ask for help", "ifChosenGoTo":2},
@@ -257,7 +252,7 @@
             "title": "You're a junior in high school and it's prom night. You get your period a few hours before prom and the sharp pain in your stomach is back. You're struggling to get out of bed to get dressed.",
             "prompt": "What do you do?",
             "explanation": "",
-            "image": "",
+            "image": "assets/graphics/crying_white.png",
             "audio": "",
             "choices": [
                 {"option": "You decide to skip prom and stay home to rest", "ifChosenGoTo":5},
@@ -280,7 +275,7 @@
             "title": "The pain continues throughout the night and you continue taking painkillers. You take more than the recommended amount and end up overdosing. You're rushed to the hospital.",
             "prompt": "",
             "explanation": "",
-            "image": "",
+            "image": "assets/graphics/painkillers_white.png",
             "audio": "",
             "choices": [
                 {"option": "Next", "ifChosenGoTo":7}
@@ -291,7 +286,7 @@
             "title": "You wake up in the hospital and the doctor says you're stable now. He asks you why you took all those painkillers. You tell him you didn't want to miss prom and didn't know how to deal with the pain.",
             "prompt": "",
             "explanation": "",
-            "image": "",
+            "image": "assets/graphics/hospital_white.png",
             "audio": "",
             "choices": [
                 {"option": "The doctor says there's nothing wrong with you. You can continue taking painkillers without exceeding the recommended limit.", "ifChosenGoTo":8},
@@ -314,7 +309,7 @@
             "title": "It's been seven years. You're 20 years old now. You've tried different types of birth control but none of them help ease any of your symptoms. They also come with their own side effects, like depression and weight gain. You've already seen five different gynocologists but none have pinpointed the cause of the pain. You start researching endo after hearing about it from your coworker. You join Facebook support groups and connect with other women who have endo. You finally find people who understand you and believe your pain. A handful of them recommend a gynecologist in another state.",
             "prompt": "What do you want to do?",
             "explanation": "",
-            "image": "",
+            "image": "assets/graphics/calendar_white.png",
             "audio": "",
             "choices": [
                 {"option": "You can't afford to travel at the moment. You continue seeing your gynecologist.", "ifChosenGoTo":10},
@@ -337,7 +332,7 @@
             "title": "It's the day of your appointment. You go to the doctor and explain to her the pain you've been feeling and all the symptoms you've been experiencing over the past seven years. You tell her you believe you have endo and she agrees. She says you need to get a laparoscopy",
             "prompt": "",
             "explanation": "A laproscopy is a surgical diagnostic procedure used to examine the organs inside the abdomen. To this day, it's the only way to diagnose and remove endo tissue.",
-            "image": "",
+            "image": "assets/graphics/endo_white.png",
             "audio": "",
             "choices": [
                 {"option": "Next", "ifChosenGoTo":12}
@@ -348,7 +343,7 @@
             "title": "You get the surgery done and the doctor finds endo tissue on your ovaries, fallopian tubes and tissue lining the pelvis. She removes it. The pain, however, continues months after the surgery. The doctor says its normal because your body is still traumatized from the past seven years. She mentions that some women get a hysterectomy, which is the surgical removal of the uterus, as a solution.",
             "prompt": "",
             "explanation": "",
-            "image": "",
+            "image": "assets/graphics/reporgan_white.png",
             "audio": "",
             "choices": [
                 {"option": "You don't want to have kids and believe hysterectomy is the best solution for you.", "ifChosenGoTo":13},

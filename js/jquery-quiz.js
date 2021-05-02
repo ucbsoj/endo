@@ -32,13 +32,16 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/
         return c*((t=t/d-1)*t*t + 1) + b;
     }});
        
-    };
+    }; 
     
     base.createQuestion = function(d, first){
       
       let questionHolder = $("<div />")
         .addClass("card my-3 active")
+        .css({"background-color":"transparent","color":"white"})
         .attr("data-adventure-id", d.id);
+      
+      console.log(questionHolder);
 
       let questionBody = $("<div />")
         .addClass("card-body");
@@ -73,7 +76,7 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/
         let questionChoices = $("<div />").addClass("d-grid gap-2");
         d.choices.forEach(function(j,k){
           $("<button />")
-            .addClass("btn btn-secondary")
+            .addClass("btn btn-light")
             .attr("type","button")
             .attr("data-adventure-goto", j.ifChosenGoTo)
             .text(j.option)
