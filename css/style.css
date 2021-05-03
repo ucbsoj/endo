@@ -8,16 +8,16 @@ html,body{
 
 /* fonts */
 body{
-	font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+	font-family: Open Sans, Arial, sans-serif;
 	color: #eee;
     background: rgb(184,184,184);
     background: linear-gradient(180deg, rgba(184,184,184,1) 0%, rgba(168,92,92,1) 49%, rgba(151,0,0,1) 100%);
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: Lato, sans-serif;
+	font-family: PT Sans Caption, sans-serif;
 }
 .lead-description{
-	font-family: Lato, sans-serif;
+	font-family: Pt Sans Caption, sans-serif;
 }
 
 #quiz-holder{
