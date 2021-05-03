@@ -38,7 +38,7 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/
       
       let questionHolder = $("<div />")
         .addClass("card my-3 active")
-        .css({"background-color":"transparent","color":"white"})
+        .css({"background-color":"transparent","color":"white","border":"none"})
         .attr("data-adventure-id", d.id);
       
       console.log(questionHolder);
@@ -61,7 +61,10 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/
       }
 
       if(d.image !== ""){
-        $("<img />").attr("src", d.image).appendTo(questionHolder);
+        $("<img />")
+          .attr("src", d.image)
+          .addClass("img-fluid d-block mx-auto w-50")
+          .appendTo(questionHolder);
       }
 
       if(d.title !== ""){

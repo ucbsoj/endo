@@ -15,8 +15,8 @@ set -e
 renditions=(
 # resolution  bitrate  audio-rate
 #  "426x240    400k    64k"
-#  "480x640    1000k    128k"
-  "1080x1080   2122k    64k"
+  "600x800    1200k    128k"
+  "768x1024   1500k    198k"
 )
 
 segment_target_duration=2       # try to create a new segment every X seconds
