@@ -207,7 +207,7 @@
             renderers: ['native_hls', 'html5'],
             pluginPath: 'js/mediaelement/',
             shimScriptAccess: 'always',
-            success: function(mediaElement, originalNode, instance) {
+            success: function(media, node, instance) {
               // Use the conditional to detect if you are using `native_hls` renderer for that given media;
               // otherwise, you don't need it
               if (Hls !== undefined) {

@@ -41,7 +41,6 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/
         .css({"background-color":"transparent","color":"white","border":"none"})
         .attr("data-adventure-id", d.id);
       
-      console.log(questionHolder);
 
       let questionBody = $("<div />")
         .addClass("card-body");
